@@ -7,15 +7,21 @@
 <link rel="stylesheet" href="/vuexy/assets/css/demo.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-<div class="container mt-5">
+<div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card shadow-lg rounded-4">
                 <!-- Header -->
-                <div class="card-header bg-primary text-white text-center rounded-top-4 py-3">
+                <div class="card-header bg-primary text-dark text-center rounded-top-4 py-3">
                     <h3 class="mb-0 fw-bold">
-                        <i class="bi bi-person-plus-fill me-2"></i>เพิ่มผู้ใช้ใหม่
+                        <i></i>เพิ่มผู้ใช้ใหม่
                     </h3>
+                </div>
+
+                <!-- โลโก้อยู่กลาง -->
+                <div class="mt-4 d-flex justify-content-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                        alt="User Avatar" class="rounded-circle shadow-sm" width="120" height="120">
                 </div>
 
                 <div class="card-body p-4">
@@ -61,15 +67,22 @@
                             <select name="role" id="role" class="form-select" required>
                                 <option value="">-- เลือกบทบาท --</option>
                                 <option value="user">ผู้ใช้ทั่วไป</option>
-                                <option value="manager">ผู้จัดการ</option>
+                                <option value="manager">ผู้อำนวยการ</option>
                                 <option value="admin">ผู้ดูแลระบบ</option>
                             </select>
                             <div class="invalid-feedback">กรุณาเลือกบทบาท</div>
                         </div>
 
-                        <button type="submit" class="btn btn-primary w-100 py-2 fw-bold">
-                            บันทึกผู้ใช้
-                        </button>
+                        <div class="d-flex justify-content-center gap-3">
+                            <button type="submit" class="btn btn-primary px-4">
+                                <i class="fas fa-save me-2"></i>บันทึกข้อมูล
+                            </button>
+
+                            <a href="{{ route('users.index') }}" class="btn btn-secondary px-4">
+                                <i class="fas fa-arrow-left me-2"></i>กลับไปหน้าจัดการ
+                            </a>
+                        </div>
+
                     </form>
                 </div>
             </div>
@@ -79,31 +92,31 @@
 
 <!-- Script show/hide password + bootstrap validation -->
 <script>
-document.getElementById('togglePassword').addEventListener('click', function () {
-    const passwordInput = document.getElementById('password');
-    const eyeIcon = document.getElementById('eyeIcon');
-    if (passwordInput.type === 'password') {
-        passwordInput.type = 'text';
-        eyeIcon.classList.replace('bi-eye', 'bi-eye-slash');
-    } else {
-        passwordInput.type = 'password';
-        eyeIcon.classList.replace('bi-eye-slash', 'bi-eye');
-    }
-});
+    document.getElementById('togglePassword').addEventListener('click', function() {
+        const passwordInput = document.getElementById('password');
+        const eyeIcon = document.getElementById('eyeIcon');
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            eyeIcon.classList.replace('bi-eye', 'bi-eye-slash');
+        } else {
+            passwordInput.type = 'password';
+            eyeIcon.classList.replace('bi-eye-slash', 'bi-eye');
+        }
+    });
 
-// Bootstrap validation
-(() => {
-  'use strict';
-  const forms = document.querySelectorAll('.needs-validation');
-  Array.from(forms).forEach(form => {
-    form.addEventListener('submit', event => {
-      if (!form.checkValidity()) {
-        event.preventDefault();
-        event.stopPropagation();
-      }
-      form.classList.add('was-validated');
-    }, false);
-  });
-})();
+    // Bootstrap validation
+    (() => {
+        'use strict';
+        const forms = document.querySelectorAll('.needs-validation');
+        Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    })();
 </script>
 @endsection

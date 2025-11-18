@@ -1,8 +1,0 @@
-{
-  "name": "Laravel Codespace",
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
-  "forwardPorts": [8000, 5432],
-  "postCreateCommand": "composer install && cp .env.example .env && php artisan key:generate"
-}
