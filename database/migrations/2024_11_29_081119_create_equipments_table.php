@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('equipment_name');
             $table->unsignedInteger('stock')->default(0);  // จำนวนใน stock (unsigned integer)
             $table->foreignId('equipment_type_id')->references('id')->on('equipment_type')->onDelete('cascade'); // ความสัมพันธ์กับ equipmenttype
+            $table->string('equipment_code')->nullable();
             $table->timestamps();
         });
     }

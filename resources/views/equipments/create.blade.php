@@ -39,6 +39,12 @@
                     <input type="number" name="stock" id="stock" class="form-control" placeholder="ป้อนจำนวน" required>
                 </div>
 
+                <!-- Equipment Code -->
+                <div class="mb-3">
+                    <label for="equipment_code" class="form-label">รหัสครุภัณฑ์ (ถ้ามี)</label>
+                    <input type="text" name="equipment_code" id="equipment_code" class="form-control" placeholder="ป้อนรหัสครุภัณฑ์">
+                </div>
+
                 <!-- Equipment Type -->
                 <div class="mb-3">
                     <label for="equipment_type_id" class="form-label">ประเภทของครุภัณฑ์</label>

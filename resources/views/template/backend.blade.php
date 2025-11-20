@@ -105,13 +105,14 @@
           </li>
           @endif
 
-          <!-- แสดงเมนูเฉพาะสำหรับ Admin -->
-          @if(Auth::check() && in_array(Auth::user()->role, ['admin', 'manager']))
+          <!-- เมนูสำหรับ Admin -->
+          @if(Auth::check() && Auth::user()->role === 'admin')
           <li class="menu-item active open">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
               <i class="menu-icon tf-icons ti ti-smart-home"></i>
               <div data-i18n="เมนูทั้งหมด">เมนูทั้งหมด</div>
             </a>
+
             <ul class="menu-sub">
               <li class="menu-item">
                 <a href="{{ route('dashboard.index') }}" class="menu-link">
@@ -141,6 +142,25 @@
               <li class="menu-item">
                 <a href="{{ route('frontend.index') }}" class="menu-link">
                   <div data-i18n="ข้อมูลการยืมคืน">ข้อมูลการยืมคืน</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+          @endif
+
+
+          <!-- เมนูสำหรับ Manager (เห็นเฉพาะ รายการยืมครุภัณฑ์) -->
+          @if(Auth::check() && Auth::user()->role === 'manager')
+          <li class="menu-item active open">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons ti ti-list"></i>
+              <div data-i18n="เมนูผู้จัดการ">เมนูผู้จัดการ</div>
+            </a>
+
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="{{ route('equipmentborrow.index') }}" class="menu-link">
+                  <div data-i18n="รายการยืมครุภัณฑ์">รายการยืมครุภัณฑ์</div>
                 </a>
               </li>
             </ul>

@@ -13,6 +13,7 @@ class Equipments extends Model
         'equipment_name',
         'stock',
         'equipment_type_id',
+        'equipment_code',
     ];
 
     /**

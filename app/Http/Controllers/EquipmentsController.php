@@ -29,6 +29,7 @@ class EquipmentsController extends Controller
             'equipment_name' => 'required|string|max:255',
             'stock' => 'required|integer|min:0',
             'equipment_type_id' => 'required|exists:equipment_type,id',
+            'equipment_code' => 'nullable|string|max:255',
         ]);
 
         // บันทึกข้อมูลอุปกรณ์ใหม่
@@ -36,6 +37,7 @@ class EquipmentsController extends Controller
             'equipment_name' => $validated['equipment_name'],
             'stock' => $validated['stock'],
             'equipment_type_id' => $validated['equipment_type_id'],
+            'equipment_code' => $validated['equipment_code'] ?? null,
         ]);
 
         // รีไดเร็กต์กลับไปที่หน้าแสดงรายการอุปกรณ์
@@ -79,6 +81,7 @@ class EquipmentsController extends Controller
             'equipment_name' => 'required|string|max:255',
             'stock' => 'required|integer|min:0',
             'equipment_type_id' => 'required|exists:equipment_type,id',
+            'equipment_code' => 'nullable|string|max:255',
         ]);
 
         // ค้นหาอุปกรณ์ตาม ID และอัปเดตข้อมูล
@@ -87,6 +90,7 @@ class EquipmentsController extends Controller
             'equipment_name' => $validated['equipment_name'],
             'stock' => $validated['stock'],
             'equipment_type_id' => $validated['equipment_type_id'],
+            'equipment_code' => $validated['equipment_code'] ?? null,
         ]);
 
         // รีไดเร็กต์กลับไปที่หน้าแสดงรายการอุปกรณ์

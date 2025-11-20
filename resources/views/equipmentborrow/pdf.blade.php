@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>รายการการยืมพัสดุ</title>
+    <title>รายการการครุภัณฑ์</title>
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -44,7 +44,7 @@
 
 <body>
     <img src="02.png" alt="โลโก้" />
-    <h2 class="text-center">รายการการยืมพัสดุ</h2>
+    <h2 class="text-center">รายการการยืมครุภัณฑ์</h2>
 
     <!-- วันที่ปัจจุบัน -->
     <p style="text-align: center; font-size:20px; font-weight:bold;">
@@ -55,7 +55,7 @@
         <thead>
             <tr>
                 <th>ลำดับ</th>
-                <th>พัสดุ</th>
+                <th>ครุภัณฑ์</th>
                 <th>จำนวน</th>
                 <th>ชื่อผู้ยืม</th>
                 <th>วันที่ยืม</th>

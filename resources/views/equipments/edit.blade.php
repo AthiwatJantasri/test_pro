@@ -42,6 +42,12 @@
                         <input type="number" name="stock" id="stock" class="form-control" value="{{ $equipments->stock }}" required>
                     </div>
 
+                    <!-- Input for Equipment Code -->
+                    <div class="mb-3">
+                        <label for="equipment_code" class="form-label">รหัสครุภัณฑ์ (ถ้ามี)</label>
+                        <input type="text" name="equipment_code" id="equipment_code" class="form-control" value="{{ $equipments->equipment_code }}">
+                    </div>
+
                     <!-- Dropdown for Equipment Type -->
                     <div class="mb-3">
                         <label for="equipment_type_id" class="form-label">หน่วยนับของครุภัณฑ์</label>
