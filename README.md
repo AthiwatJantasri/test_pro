@@ -10,17 +10,17 @@
    DB_CONNECTION=mysql
    DB_HOST=127.0.0.1
    DB_PORT=3306
-   DB_DATABASE=your_database_name
-   DB_USERNAME=your_username
-   DB_PASSWORD=your_password
+   DB_DATABASE=project ##สร้างDBชื่อเดียวกันจะmigrateง่ายกว่า
+   DB_USERNAME=mysql ##หรือuserที่ท่านตั้งค่าไว้
+   DB_PASSWORD=รหัสผ่านของท่าน
 
    #หากเป็นPostgreSQL
    DB_CONNECTION=pgsql
    DB_HOST=127.0.0.1
    DB_PORT=5432
-   DB_DATABASE=project
-   DB_USERNAME=postgres
-   DB_PASSWORD=csrmu123
+   DB_DATABASE=project ##สร้างDBชื่อเดียวกันจะmigrateง่ายกว่า
+   DB_USERNAME=postgres ##หรือuserที่ท่านตั้งค่าไว้
+   DB_PASSWORD=รหัสผ่านของท่าน
 
    ```
 3. รันคำสั่งเพื่อสร้างตารางในฐานข้อมูล:
