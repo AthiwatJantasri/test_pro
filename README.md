@@ -61,8 +61,7 @@ php artisan db:seed --class=UserSeeder
 ```
 
 ### 🔐 ข้อมูลเข้าสู่ระบบ (Admin)
-- **Email**: `adminrmu@example.com`  
-- **Password**: `admin2546`
+- database/seeder/UserSeeder
 
 ---
 
