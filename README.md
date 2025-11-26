@@ -10,7 +10,7 @@
    แล้วทดสอบ รัน php artisan serv
 
 3.หากเจอerror500ตอนเข้าเว็บให้รันคำสั่งต่อไปนี้
-PS D:\project\test_pro-main> # สร้าง table สำหรับ session
+>> # สร้าง table สำหรับ session
 >> php artisan session:table
 >>
 >> # สร้าง table สำหรับ cache
