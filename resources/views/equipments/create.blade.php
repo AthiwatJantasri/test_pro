@@ -33,16 +33,16 @@
                     <input type="text" name="equipment_name" id="equipment_name" class="form-control" placeholder="ป้อนชื่อพัสดุ" required>
                 </div>
 
-                <!-- Stock -->
-                <div class="mb-3">
-                    <label for="stock" class="form-label">จำนวนที่เพิ่มในคลัง</label>
-                    <input type="number" name="stock" id="stock" class="form-control" placeholder="ป้อนจำนวน" required>
-                </div>
-
                 <!-- Equipment Code -->
                 <div class="mb-3">
                     <label for="equipment_code" class="form-label">รหัสครุภัณฑ์ (ถ้ามี)</label>
                     <input type="text" name="equipment_code" id="equipment_code" class="form-control" placeholder="ป้อนรหัสครุภัณฑ์">
+                </div>
+
+                <!-- Stock -->
+                <div class="mb-3">
+                    <label for="stock" class="form-label">จำนวนที่เพิ่มในคลัง</label>
+                    <input type="number" name="stock" id="stock" class="form-control" placeholder="ป้อนจำนวน" required>
                 </div>
 
                 <!-- Equipment Type -->
