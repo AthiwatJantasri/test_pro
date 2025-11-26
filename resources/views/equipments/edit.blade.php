@@ -36,16 +36,16 @@
                         <input type="text" name="equipment_name" id="equipment_name" class="form-control" value="{{ $equipments->equipment_name }}" required>
                     </div>
 
-                    <!-- Input for Stock -->
-                    <div class="mb-3">
-                        <label for="stock" class="form-label">จำนวนที่มีอยู่ในคลัง</label>
-                        <input type="number" name="stock" id="stock" class="form-control" value="{{ $equipments->stock }}" required>
-                    </div>
-
                     <!-- Input for Equipment Code -->
                     <div class="mb-3">
                         <label for="equipment_code" class="form-label">รหัสครุภัณฑ์ (ถ้ามี)</label>
                         <input type="text" name="equipment_code" id="equipment_code" class="form-control" value="{{ $equipments->equipment_code }}">
+                    </div>
+
+                    <!-- Input for Stock -->
+                    <div class="mb-3">
+                        <label for="stock" class="form-label">จำนวนที่มีอยู่ในคลัง</label>
+                        <input type="number" name="stock" id="stock" class="form-control" value="{{ $equipments->stock }}" required>
                     </div>
 
                     <!-- Dropdown for Equipment Type -->
