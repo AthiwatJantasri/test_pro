@@ -8,7 +8,20 @@
    php artisan db:seed --class=UserSeeder เพื่อสร้างuser เริ่มต้น
    หลังจากนั้น ให้ รันคำสั่ง composer install
    แล้วทดสอบ รัน php artisan serv
-3. แก้ไขไฟล์ `.env` ให้ตรงกับข้อมูลของฐานข้อมูล เช่น:
+
+3.หากเจอerror500ตอนเข้าเว็บให้รันคำสั่งต่อไปนี้
+PS D:\project\test_pro-main> # สร้าง table สำหรับ session
+>> php artisan session:table
+>>
+>> # สร้าง table สำหรับ cache
+>> php artisan cache:table
+>>
+>> # สร้าง table สำหรับ queue (ถ้าใช้ queue)
+>> php artisan queue:table
+>>
+>> # รัน migrate เพื่อสร้าง table จริง
+>> php artisan migrate
+4. แก้ไขไฟล์ `.env` ให้ตรงกับข้อมูลของฐานข้อมูล เช่น:
    ```env
    //ยกตัวอย่าง
    #หากเป็นMySQL
@@ -28,7 +41,7 @@
    DB_PASSWORD=รหัสผ่านของท่าน
 
    ```
-4. รันคำสั่งเพื่อสร้างตารางในฐานข้อมูล:
+5. รันคำสั่งเพื่อสร้างตารางในฐานข้อมูล:
    ```bash
    php artisan migrate
    ```
