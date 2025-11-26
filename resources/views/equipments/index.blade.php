@@ -35,9 +35,9 @@
                     <thead class="table-primary">
                         <tr>
                             <th>ลำดับ</th>
+                            <th>รหัสครุภัณฑ์</th>
                             <th>ชื่อครุภัณฑ์</th>
                             <th>จำนวนที่มีอยู่ในคลัง</th>
-                            <th>รหัสครุภัณฑ์</th>
                             <th>การจัดการ</th>
                         </tr>
                     </thead>
@@ -45,9 +45,9 @@
                         @foreach($equipments as $equipment)
                         <tr>
                             <td>{{ ($equipments->currentPage() - 1) * $equipments->perPage() + $loop->iteration }}</td>
+                            <td>{{ $equipment->equipment_code }}</td>
                             <td>{{ $equipment->equipment_name }}</td>
                             <td>{{ $equipment->stock }} {{ $equipment->equipmentType->equipmenttype_name }}</td>
-                            <td>{{ $equipment->equipment_code }}</td>
                             <td>
                                 <!-- Edit Button -->
                                 <a href="{{ route('equipments.edit', $equipment->id) }}" class="btn btn-warning btn-sm me-1">แก้ไข</a>
