@@ -27,16 +27,16 @@
                     <p class="text-muted">กรอกข้อมูลครุภัณฑ์ใหม่เพื่อเพิ่มลงในคลัง</p>
                 </div>
 
-                <!-- Equipment Name -->
-                <div class="mb-3">
-                    <label for="equipment_name" class="form-label">ชื่อครุภัณฑ์</label>
-                    <input type="text" name="equipment_name" id="equipment_name" class="form-control" placeholder="ป้อนชื่อพัสดุ" required>
-                </div>
-
                 <!-- Equipment Code -->
                 <div class="mb-3">
                     <label for="equipment_code" class="form-label">รหัสครุภัณฑ์ (ถ้ามี)</label>
                     <input type="text" name="equipment_code" id="equipment_code" class="form-control" placeholder="ป้อนรหัสครุภัณฑ์">
+                </div>
+
+                <!-- Equipment Name -->
+                <div class="mb-3">
+                    <label for="equipment_name" class="form-label">ชื่อครุภัณฑ์</label>
+                    <input type="text" name="equipment_name" id="equipment_name" class="form-control" placeholder="ป้อนชื่อพัสดุ" required>
                 </div>
 
                 <!-- Stock -->
