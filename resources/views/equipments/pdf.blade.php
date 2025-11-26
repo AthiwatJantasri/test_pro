@@ -56,6 +56,7 @@
             <tr>
                 <th>ลำดับ</th>
                 <th>ชื่อพัสดุ</th>
+                <th>รหัสครุภัณฑ์</th>
                 <th>จำนวนที่มีอยู่ในคลัง</th>
             </tr>
         </thead>
@@ -64,6 +65,7 @@
             <tr>
                 <td>{{ $index + 1 }}</td>
                 <td>{{ $equipment->equipment_name }}</td>
+                <td>{{ $equipment->equipment_code }}</td>
                 <td>{{ $equipment->stock }} {{ $equipment->equipmentType->equipmenttype_name }}</td>
             </tr>
             @endforeach
