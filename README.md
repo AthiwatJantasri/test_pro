@@ -61,12 +61,36 @@ php artisan db:seed --class=UserSeeder
   ```bash
   php -m
   ```
-  และดูว่ามี `pdo_mysql,pdo_pgsql` หรือไม่
-  ไฟล์php.iniหรือไฟล์configนำ;ออกจากตัวไดรเวอร์ที่ฟ้องerrorออกแล้วหรือไม่
-- ตรวจสอบว่า MySQL/PostgreSQL ทำงานอยู่ เช่น บน MAMP/XAMPP หรือใช้ phpMyAdmin
+- ค่า .env ถูกต้องหรือไม่ เช่นชื่อฐานข้อมูลและพอร์ต
+
+- ตรวจสอบว่า PHP รองรับ pdo_mysql หรือ pdo_pgsql โดยใช้ php -m
+
+- ตรวจสอบว่า MySQL/PostgreSQL ทำงานอยู่
+
+- ตรวจสอบว่า Composer ติดตั้งสำเร็จ และแพ็กเกจ PDF ถูกติดตั้งแล้ว
 - หากเชื่อมต่อDatabaseไม่ได้ให้ตรวจสอบว่าservice windowตัวนั้นๆเปิดอยู่หรือไม่เช่น 5432 not found    ให้เปิดservice pgsqlก่อน เป็นต้น
 
----
+-----------------------------------------------------------------------------------------------------------------------------------
+### 4. การดีพลอย (Deployment)
+
+เตรียมเซิร์ฟเวอร์: ติดตั้ง PHP, Composer, Database, Web Server
+
+อัปโหลดโค้ดไปยังเซิร์ฟเวอร์ด้วย Git หรือ FTP
+
+รัน composer install --no-dev --optimize-autoloader
+
+รัน php artisan migrate --force และ php artisan db:seed --force
+
+ตั้งค่า .env ให้ตรงกับเซิร์ฟเวอร์จริง
+
+ตั้งค่า Permission: chmod -R 775 storage bootstrap/cache
+
+Optimize ระบบ: php artisan config:cache, route:cache, view:cache
+
+ตั้งค่า Domain และ SSL ด้วย Certbot หรือ Let’s Encrypt
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
 
 ## 4. ข้อสงวนสิทธิ์
 
