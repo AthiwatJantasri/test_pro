@@ -23,7 +23,7 @@
    DB_CONNECTION=pgsql
    DB_HOST=127.0.0.1
    DB_PORT=5432
-   DB_DATABASE=project ##สร้างDBชื่อเดียวกันจะmigrateง่ายกว่า
+   DB_DATABASE=athiwat_db ##สร้างDBชื่อเดียวกันในpgadminก่อนจะmigrateง่ายกว่า
    DB_USERNAME=postgres ##หรือuserที่ท่านตั้งค่าไว้
    DB_PASSWORD=รหัสผ่านของท่าน
 
