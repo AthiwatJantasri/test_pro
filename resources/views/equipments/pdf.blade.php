@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>รายการพัสดุ</title>
+    <title>รายการครุภัณฑ์</title>
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -55,8 +55,8 @@
         <thead>
             <tr>
                 <th>ลำดับ</th>
-                <th>ชื่อพัสดุ</th>
                 <th>รหัสครุภัณฑ์</th>
+                <th>ชื่อพัสดุ</th>
                 <th>จำนวนที่มีอยู่ในคลัง</th>
             </tr>
         </thead>
@@ -64,8 +64,8 @@
             @foreach($equipments as $index => $equipment)
             <tr>
                 <td>{{ $index + 1 }}</td>
-                <td>{{ $equipment->equipment_name }}</td>
                 <td>{{ $equipment->equipment_code }}</td>
+                <td>{{ $equipment->equipment_name }}</td>
                 <td>{{ $equipment->stock }} {{ $equipment->equipmentType->equipmenttype_name }}</td>
             </tr>
             @endforeach
