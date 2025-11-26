@@ -30,16 +30,16 @@
                         <p class="text-muted">ปรับปรุงข้อมูลครุภัณฑ์ที่ต้องการ</p>
                     </div>
 
-                    <!-- Input for Equipment Name -->
-                    <div class="mb-3">
-                        <label for="equipment_name" class="form-label">ชื่อครุภัณฑ์</label>
-                        <input type="text" name="equipment_name" id="equipment_name" class="form-control" value="{{ $equipments->equipment_name }}" required>
-                    </div>
-
                     <!-- Input for Equipment Code -->
                     <div class="mb-3">
                         <label for="equipment_code" class="form-label">รหัสครุภัณฑ์ (ถ้ามี)</label>
                         <input type="text" name="equipment_code" id="equipment_code" class="form-control" value="{{ $equipments->equipment_code }}">
+                    </div>
+
+                    <!-- Input for Equipment Name -->
+                    <div class="mb-3">
+                        <label for="equipment_name" class="form-label">ชื่อครุภัณฑ์</label>
+                        <input type="text" name="equipment_name" id="equipment_name" class="form-control" value="{{ $equipments->equipment_name }}" required>
                     </div>
 
                     <!-- Input for Stock -->
