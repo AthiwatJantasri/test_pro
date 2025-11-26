@@ -20,7 +20,7 @@
     รัน migrate เพื่อสร้าง table จริง
     php artisan migrate
 
-# สร้าง App Key ใหม่ในโฟลเดอร์โปรเจกต์ test_pro-main รัน:
+# สร้าง App Key ใหม่ในโฟลเดอร์โปรเจกต์ ไฟล์ .env test_pro-main รัน:
     - php artisan key:generate
 
 4. แก้ไขไฟล์ `.env` ให้ตรงกับข้อมูลของฐานข้อมูล เช่น:
