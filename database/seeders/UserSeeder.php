@@ -18,10 +18,10 @@ class UserSeeder extends Seeder
     // คำสั่งสร้างข้อมูลผู้ใช้ php artisan db:seed --class=UserSeeder
 
         User::create([
-            'username' => 'adminRMU',
-            'telephone_number' => '0123456789',
-            'email' => 'adminrmu@example.com',
-            'password' => Hash::make('admin2546'),
+            'username' => 'ใส่Username',
+            'telephone_number' => 'ใส่เบอร์โทร',
+            'email' => 'ใส่Email',
+            'password' => Hash::make('ใส่รหัสผ่าน'),
             'role' => 'admin',
         ]);
     }
